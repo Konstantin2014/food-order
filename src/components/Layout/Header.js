@@ -3,12 +3,12 @@ import SushiImage from "../../assets/sushi.jpg";
 import styled from "./Header.module.css";
 import HeaderCartButton from "./HeaderCartButton";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <>
       <header className={styled.header}>
         <h1>Японська кухня</h1>
-        <HeaderCartButton />
+        <HeaderCartButton onClick={props.onShowCart} />
       </header>
       <div className={styled["main-image"]}>
         <img src={SushiImage} alt="Суші" />

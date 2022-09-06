@@ -1,7 +1,7 @@
 import styled from "./Cart.module.css";
 import Modal from "../UI/Modal";
 
-const Cart = () => {
+const Cart = (props) => {
   const cartItems = (
     <ul className={styled["cart-items"]}>
       {[
@@ -17,14 +17,16 @@ const Cart = () => {
     </ul>
   );
   return (
-    <Modal>
+    <Modal onHideCart={props.onHideCart}>
       {cartItems}
       <div className={styled.total}>
         <span>Загалом</span>
         <span>49.99</span>
       </div>
       <div className={styled.actions}>
-        <button className={styled["button--alt"]}>Закрити</button>
+        <button className={styled["button--alt"]} onClick={props.onHideCart}>
+          Закрити
+        </button>
         <button className={styled.button}>Замовити</button>
       </div>
     </Modal>
