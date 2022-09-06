@@ -1,5 +1,5 @@
 import React from "react";
-import SushiImage from "../../assets/003 sushi.jpg";
+import SushiImage from "../../assets/sushi.jpg";
 import styled from "./Header.module.css";
 import HeaderCartButton from "./HeaderCartButton";
 
