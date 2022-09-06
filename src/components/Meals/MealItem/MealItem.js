@@ -1,8 +1,9 @@
 import styled from "./MealItem.module.css";
+import MealItemForm from "./MealItemForm";
 
 const MealItem = (props) => {
   const formattedPrice = `$${props.price}`;
-  console.log(props);
+
   return (
     <li className={styled.meal}>
       <div>
@@ -10,7 +11,9 @@ const MealItem = (props) => {
         <div className={styled.description}>{props.description}</div>
         <div className={styled.price}>{formattedPrice}</div>
       </div>
-      <div></div>
+      <div>
+        <MealItemForm />
+      </div>
     </li>
   );
 };
