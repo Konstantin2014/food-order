@@ -1,4 +1,5 @@
 import React from "react";
+
 //  создаем стркутуру контекста для корзины
 const CartContext = React.createContext({
   items: [],
