@@ -1,9 +1,10 @@
 import styled from "./HeaderCartButton.module.css";
 import CartIcon from "./CartIcon";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import CartContext from "../../store/card-context";
 
 const HeaderCartButton = (props) => {
+  const [isButtonAnimated, setIsButtonAnimated] = useState(false);
   const cartContext = useContext(CartContext); // теперь HeaderCartButton будет переоцениваться react при ихменении CartContextю
   // И контекст будет изменяться, когда мы будем его изменять в CartContextProviderю Таким образом мы устанавливаем соединение между контекстом и компонентами
 
@@ -11,8 +12,25 @@ const HeaderCartButton = (props) => {
     return currentValue + item.amount;
   }, 0);
 
+  const buttonClasses = `${styled.button} ${
+    isButtonAnimated ? styled.bump : ""
+  }`;
+  useEffect(() => {
+    if (cartContext.items.length === 0) {
+      return;
+    }
+    setIsButtonAnimated(true);
+
+    const timer = setTimeout(() => {
+      setIsButtonAnimated(false);
+    }, 300);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [cartContext.items]);
+
   return (
-    <button className={styled.button} onClick={props.onClick}>
+    <button className={buttonClasses} onClick={props.onClick}>
       <span className={styled.icon}>
         <CartIcon />
       </span>
