@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/food-order/static/css/main.2993867b.chunk.css",
+    "main.js": "/food-order/static/js/main.6824c403.chunk.js",
+    "main.js.map": "/food-order/static/js/main.6824c403.chunk.js.map",
+    "runtime-main.js": "/food-order/static/js/runtime-main.494f2e54.js",
+    "runtime-main.js.map": "/food-order/static/js/runtime-main.494f2e54.js.map",
+    "static/js/2.a3828481.chunk.js": "/food-order/static/js/2.a3828481.chunk.js",
+    "static/js/2.a3828481.chunk.js.map": "/food-order/static/js/2.a3828481.chunk.js.map",
+    "index.html": "/food-order/index.html",
+    "static/css/main.2993867b.chunk.css.map": "/food-order/static/css/main.2993867b.chunk.css.map",
+    "static/js/2.a3828481.chunk.js.LICENSE.txt": "/food-order/static/js/2.a3828481.chunk.js.LICENSE.txt",
+    "static/media/sushi.a2b4b921.jpg": "/food-order/static/media/sushi.a2b4b921.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.494f2e54.js",
+    "static/js/2.a3828481.chunk.js",
+    "static/css/main.2993867b.chunk.css",
+    "static/js/main.6824c403.chunk.js"
+  ]
+}
